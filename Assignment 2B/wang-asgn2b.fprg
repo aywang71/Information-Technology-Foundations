@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value="Assignment 2B:  Design/create a program using the sequence structure And Named Constants"/>
+        <attribute name="authors" value="Andrew Wang"/>
+        <attribute name="about" value="Current Semester: Spring&#13;&#10;Course Section: CTI 110&#13;&#10;Blackboard Username: aywang&#13;&#10;"/>
+        <attribute name="saved" value="2022-01-16 06:30:54 PM"/>
+        <attribute name="created" value="aHlwZXI7REVTS1RPUC1COVVKQzNLOzIwMjItMDEtMTY7MDY6MTc6MDAgUE07Mjg4Mg=="/>
+        <attribute name="edited" value="aHlwZXI7REVTS1RPUC1COVVKQzNLOzIwMjItMDEtMTY7MDY6MzA6NTQgUE07NDsyOTk3"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="T1: Balance 100 Overdrafts: 2 Output Expected for fee:  5&#13;&#10;T2: Balance 100 Overdrafts: 0  Output Expected for fee:  1&#13;&#10;T3: Balance  345 Overdrafts: 2 Output Expected for fee: 7.45&#13;&#10;T4: Balance 345 Overdrafts: 0 Expected output for fee:3.45&#13;&#10;T5: Balance 350.90 Overdrafts: 2 Expected outputs for fee: 7.509&#13;&#10;T6: Balance 350.90 Overdrafts: 0 Expected output for fee: 3.509&#13;&#10;"/>
+            <declare name="MINfee, accountBal, totalMin, totalOver, totalFee" type="Real" array="False" size=""/>
+            <declare name="OVERDRAFTfee, overdraftNum" type="Integer" array="False" size=""/>
+            <assign variable="MINfee" expression="0.01"/>
+            <assign variable="OVERDRAFTfee" expression="2"/>
+            <output expression="&quot;Welcome to Andrew Wang's fee calculator!&quot;" newline="True"/>
+            <output expression="&quot;Please enter your account balance: &quot;" newline="True"/>
+            <input variable="accountBal"/>
+            <output expression="&quot;Please input the number of overdrafts you have occured: &quot;" newline="True"/>
+            <input variable="overdraftNum"/>
+            <assign variable="totalMin" expression="accountBal * MINfee"/>
+            <assign variable="totalOver" expression="overdraftNum * OVERDRAFTfee"/>
+            <assign variable="totalFee" expression="totalMin + totalOver"/>
+            <output expression="&quot;We have finished processing your total fee! Your total fee is: &quot; &amp; totalFee" newline="True"/>
+            <output expression="&quot;This is the end of the program. This program was written by Andrew Wang.&quot;" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

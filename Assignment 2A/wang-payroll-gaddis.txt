@@ -1,0 +1,17 @@
+// This program calculates net pay and produces a Payroll Report. It can only be run once.
+Declare String name
+
+// In Flowgorithm you can combine declarations as long as they are the SAME data type.
+Declare Real gross, deduct, net, rATE
+
+Set rATE = 0.25
+Display "Your name"
+Input name
+Display "Your Gross"
+Input gross
+Display "Payroll Report"
+Display "Name     Gross     Deductions     Net: "
+Set deduct = gross * rATE
+Set net = gross - deduct
+Display name, "     ", gross, "          ", deduct, "             ", net
+Display "***End of Report"

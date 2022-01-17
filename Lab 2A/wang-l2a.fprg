@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value="Lab &#8211; 2A Translate Pseudocode with a sequential structure to flowcharts"/>
+        <attribute name="authors" value="Andrew Wang"/>
+        <attribute name="about" value="Current Semester: Spring&#13;&#10;Course Section: CTI 110&#13;&#10;Blackboard Username: aywang&#13;&#10;"/>
+        <attribute name="saved" value="2022-01-16 05:53:32 PM"/>
+        <attribute name="created" value="aHlwZXI7REVTS1RPUC1COVVKQzNLOzIwMjItMDEtMTY7MDU6MzE6NDcgUE07Mjg4OA=="/>
+        <attribute name="edited" value="aHlwZXI7REVTS1RPUC1COVVKQzNLOzIwMjItMDEtMTY7MDU6NTM6MzIgUE07MjsyOTk1"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="    ... T1:Adults 0, child 2 subtotal = 51, tax 3.57 and total cost 54.57 &#13;&#10;    ... T2: Adults 2, child 0. Subtotal = 73.50, tax 5.145 total cost 78.645 &#13;&#10;    ... T3: adults 2 , child 2. Subtotal = 124.5. Tax =8.715 , total cost = 133.215&#13;&#10;"/>
+            <declare name="TAX, ADULTcost, CHILDcost, subtotal, salesTax, totalCost" type="Real" array="False" size=""/>
+            <assign variable="TAX" expression="0.07"/>
+            <assign variable="ADULTcost" expression="36.75"/>
+            <assign variable="CHILDcost" expression="25.5"/>
+            <declare name="phone, adultTickets, childTickets" type="Integer" array="False" size=""/>
+            <declare name="name" type="String" array="False" size=""/>
+            <output expression="&quot;This program calculates total cost of concert tickets&quot;" newline="True"/>
+            <output expression="&quot;Welcome to Andrew Wang's offical concert ticket purchasing program (patent pending). You are purchasing tickets for the concernt: Andrew Wang's Offical Number 1 Concert&quot;" newline="True"/>
+            <output expression="&quot;Please input your name:&quot;" newline="True"/>
+            <input variable="name"/>
+            <output expression="&quot;Please input your Phone Number:&quot;" newline="True"/>
+            <input variable="phone"/>
+            <output expression="&quot;Please input the number of adult tickets you wish to purchase:&quot;" newline="True"/>
+            <input variable="adultTickets"/>
+            <output expression="&quot;Please input the number of child tickets you wish to purchase:&quot;" newline="True"/>
+            <input variable="childTickets"/>
+            <assign variable="subtotal" expression="(adultTickets * ADULTcost) + (childTickets * CHILDcost)"/>
+            <assign variable="salesTax" expression="subtotal*TAX"/>
+            <assign variable="totalCost" expression="subtotal + salesTax"/>
+            <output expression="&quot;Andrew Wang's Offical Number 1 Concert&quot;" newline="True"/>
+            <output expression="&quot;Thank you &quot; &amp; name &amp; &quot; at &quot; &amp; phone &amp; &quot;. Details of your total cost&quot; &amp; totalCost &amp; &quot; are below:&quot;" newline="True"/>
+            <output expression="&quot;Adult Tickets: &quot; &amp; adultTickets" newline="True"/>
+            <output expression="&quot;Child Tickets: &quot; &amp; childTickets" newline="True"/>
+            <output expression="&quot;Subtotal is: $&quot; &amp; subTotal &amp; &quot;, Tax is $&quot; &amp; salestax &amp; &quot; for a total cost of: $&quot; &amp; totalCost" newline="True"/>
+            <output expression="&quot;Thank you for using this program. This program was designed by Wang.&quot;" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

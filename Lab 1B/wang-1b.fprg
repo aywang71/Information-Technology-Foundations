@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value="Lab 1A &#8211; Creating YOur First program using Flowgorithm "/>
+        <attribute name="authors" value="Andrew Wang"/>
+        <attribute name="about" value="Current Semester: Spring&#13;&#10;Course Section: CTI-110&#13;&#10;Blackboard Username: aywang"/>
+        <attribute name="saved" value="2022-01-12 07:17:23 PM"/>
+        <attribute name="created" value="aHlwZXI7REVTS1RPUC1COVVKQzNLOzIwMjItMDEtMTI7MDY6NDc6NTcgUE07Mjg5Mw=="/>
+        <attribute name="edited" value="aHlwZXI7REVTS1RPUC1COVVKQzNLOzIwMjItMDEtMTI7MDc6MTc6MjMgUE07NDsyOTk1"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="T1:  Current Year 2020   Birth Year  1980  Output should be: 40&#13;&#10;T2:   Current Year 2021    Birth year  2000 Output should be: 21&#13;&#10;"/>
+            <declare name="currentYear" type="Integer" array="False" size=""/>
+            <declare name="birthYear" type="Integer" array="False" size=""/>
+            <declare name="age" type="Integer" array="False" size=""/>
+            <declare name="greeting" type="String" array="False" size=""/>
+            <assign variable="greeting" expression="&quot;Welcome to My Program&quot;"/>
+            <output expression="&quot;Please input your Birth Year&quot;" newline="True"/>
+            <input variable="birthYear"/>
+            <output expression="&quot;Please input the current year&quot;" newline="True"/>
+            <input variable="currentYear"/>
+            <assign variable="age" expression="currentYear - birthYear"/>
+            <output expression="&quot;Your age is: &quot; &amp; age &amp; &quot; Andrew Wang thanks you for using this program&quot;" newline="True"/>
+            <output expression="&quot;End of Program&quot;" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

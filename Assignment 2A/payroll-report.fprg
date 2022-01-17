@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value="figure2-8nofunctions"/>
+        <attribute name="authors" value="halliday"/>
+        <attribute name="about" value="This flowcharts does not use any modules.  Everything done in Main()."/>
+        <attribute name="saved" value="2021-02-18 02:23:02 PM"/>
+        <attribute name="created" value="dGFsb247SEFMTElEQUMtQVBFWC1SOzIwMjAtMDQtMTk7MDQ6MTE6NDEgUE07Mjg1MQ=="/>
+        <attribute name="edited" value="dGFsb247SEFMTElEQUMtQVBFWC1SOzIwMjAtMDQtMjM7MTI6MzM6MDUgQU07NTt0YWxvbjtIQUxMSURBQy1BUEVYLVI7MjAyMC0wNC0yMTswNjo0MDowNyBQTTtpbnN0cnVjdG9yLXBlMi01YS1oaWVyYXJjaHktbG9jYWwuZnByZzs5NTgz"/>
+        <attribute name="edited" value="dGFsb247SEFMTElEQUMtQVBFWC1SOzIwMjAtMDQtMjM7MDI6MTQ6NTYgUE07Mzt0YWxvbjtIQUxMSURBQy1BUEVYLVI7MjAyMC0wNC0xODswNjoxNDo0OCBQTTtpbnN0cnVjdG9yLXBlMi01Yi1sb29waGllcmFyY2h5LWxvY2FsLmZwcmc7MTAwNTU="/>
+        <attribute name="edited" value="dGFsb247SEFMTElEQUMtQVBFWC1SOzIwMjAtMDQtMjM7MDc6NTQ6NTEgUE07MTt0YWxvbjtIQUxMSURBQy1BUEVYLVI7MjAyMC0wNC0xOTswNDoxMTo0MSBQTTtpbnN0cnVjdG9yLXBlLTVhLWhpZXJhcmNoeS1nbG9iYWwtbG9vcC5mcHJnOzEwMTQy"/>
+        <attribute name="edited" value="dGFsb247SEFMTElEQUMtQVBFWC1SOzIwMjEtMDItMTg7MDI6MjM6MDIgUE07NDI7MzAwOA=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="This program calculates net pay and produces a Payroll Report. It can only be run once."/>
+            <declare name="name" type="String" array="False" size=""/>
+            <comment text="In Flowgorithm you can combine declarations as long as they are the SAME data type."/>
+            <declare name="gross, deduct, net, RATE" type="Real" array="False" size=""/>
+            <assign variable="RATE" expression="0.25"/>
+            <output expression="&quot;Your name&quot;" newline="True"/>
+            <input variable="name"/>
+            <output expression="&quot;Your Gross&quot;" newline="True"/>
+            <input variable="gross"/>
+            <output expression="&quot;Payroll Report&quot;" newline="True"/>
+            <output expression="&quot;Name     Gross     Deductions     Net: &quot;" newline="True"/>
+            <assign variable="deduct" expression="gross *RATE"/>
+            <assign variable="net" expression="gross - deduct"/>
+            <output expression="name&amp;&quot;     &quot; &amp;gross&amp;&quot;          &quot;&amp;deduct&amp;&quot;             &quot; &amp;net" newline="True"/>
+            <output expression="&quot;***End of Report&quot;" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
