@@ -1,0 +1,70 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value="assignment 4a &#8211; Working with a Decision Structure "/>
+        <attribute name="authors" value="Andrew Wang"/>
+        <attribute name="about" value="Current Semester: Spring&#13;&#10;Course Section: CTI 110&#13;&#10;Blackboard Username: aywang&#13;&#10;"/>
+        <attribute name="saved" value="2022-02-02 05:48:13 PM"/>
+        <attribute name="created" value="aHlwZXI7REVTS1RPUC1COVVKQzNLOzIwMjItMDItMDI7MDU6MzQ6MDUgUE07Mjg4MQ=="/>
+        <attribute name="edited" value="aHlwZXI7REVTS1RPUC1COVVKQzNLOzIwMjItMDItMDI7MDU6NDg6MTMgUE07NTsyOTk3"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="&#13;&#10;T1: W= 2 rate = 1 total = 2&#13;&#10;T2: w= 5 rate = 2.25 total = 11.25&#13;&#10;T3: W= 6 rate = 2.25 total = 13.50&#13;&#10;T4: W= 7 rate = 3.50 total = 24.5&#13;&#10;T4: W= 10 rate = 3.50 total = 35.00&#13;&#10;T5: W= 12.3 rate = 4.10 total = 49.2&#13;&#10;&#13;&#10;"/>
+            <call expression="welcome()"/>
+            <declare name="weight" type="Real" array="False" size=""/>
+            <output expression="&quot;Please input the weight: &quot;" newline="True"/>
+            <input variable="weight"/>
+            <call expression="calcShipping(weight)"/>
+        </body>
+    </function>
+    <function name="calcShipping" type="None" variable="">
+        <parameters>
+            <parameter name="weight" type="Real" array="False"/>
+        </parameters>
+        <body>
+            <declare name="R1, R2, R3, R4, rate, total" type="Real" array="False" size=""/>
+            <assign variable="R1" expression="1.00"/>
+            <assign variable="R2" expression="2.25"/>
+            <assign variable="R3" expression="3.50"/>
+            <assign variable="R4" expression="4.10"/>
+            <if expression="weight &lt;= 2">
+                <then>
+                    <assign variable="rate" expression="R1"/>
+                </then>
+                <else>
+                    <if expression="weight &lt;= 6">
+                        <then>
+                            <assign variable="rate" expression="R2"/>
+                        </then>
+                        <else>
+                            <if expression="weight &lt;= 10">
+                                <then>
+                                    <assign variable="rate" expression="R3"/>
+                                </then>
+                                <else>
+                                    <assign variable="rate" expression="R4"/>
+                                </else>
+                            </if>
+                        </else>
+                    </if>
+                </else>
+            </if>
+            <assign variable="total" expression="rate * weight"/>
+            <output expression="&quot;Your rate is: $&quot; &amp; rate &amp; &quot; and your total shipping cost is: $&quot; &amp; total" newline="True"/>
+        </body>
+    </function>
+    <function name="end" type="None" variable="">
+        <parameters/>
+        <body>
+            <output expression="&quot;Thanks for using this program! This program was designed by Andrew Wang!&quot;" newline="True"/>
+        </body>
+    </function>
+    <function name="welcome" type="None" variable="">
+        <parameters/>
+        <body>
+            <output expression="&quot;Welcome to Andrew's shipping cost calculator!&quot;" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
