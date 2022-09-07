@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!--Name: Natasha Wilson
+    Filename: groupI-hr-fuel.html
+    Blackboard Username: nkwilson@my.waketech.edu
+    Class Section: CTI.110.XXXX
+    Purpose: Trip cost calculator FORM
+  -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculate Trip Cost</title>
+  <link href="groupI-hr-style.css" type="text/css" rel="stylesheet" />
+</head>
+<body>
+<div class="container">
+<header class="white">
+  <h1>Trip Cost Calculator</h1>
+</header>
+<!--<aside>
+ <p>There is a ticket fee of $0.50/ticket for orders with over 5 tickets. Otherwise, the fee is $1.00/ticket.</p>
+</aside>-->
+<br>
+<main>
+  <form id="hr-fuel" class="alignment" action="groupI-hr-fuel.php" method="post">
+  <fieldset>
+  <legend>Your Car's Average Miles Per Gallon (to the nearest gallon)</legend>
+    <label for="average">Average miles per gallon:</label>
+    <input type="number" step = "0.01" id="average" name="average"required>
+    
+</fieldset>
+<br>
+  <fieldset>
+  <legend>Expected Cost of Gas per Gallon (to the nearest penny)</legend>
+    <label for="cost">Expected cost of gas per gallon:</label>
+    <input type="number" step = "0.01" id="cost" name="cost" min="1" value="1"required>
+  </fieldset>
+<br>
+  <br>
+  <fieldset>
+  <legend>Trip Length (to the nearest mile)</legend>
+    <label for="length">Length of trip:</label>
+    <input type="number" step = "0.01" id="length" name="length" min="1" value="1"required>
+  </fieldset>
+<br />
+  <button>Submit</button> 
+</form>
+</main>
+<br />
+<footer>
+  <a class="white" href="groupI-hr-portal.html">Return to Portal</a>
+</footer>
+</div><!--closes wrapper-->
+</body>
+</html>

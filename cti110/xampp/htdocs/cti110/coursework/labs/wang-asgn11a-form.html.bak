@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<!--Name: Andrew Wang
+		Filename: wang-asgn11a-form.thml
+    Blackboard User Name: aywang
+    Class Section: CTI.110.spring
+    Purpose: 
+	-->
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Event Form DD</title>
+	
+</head>
+<body>
+<div class="container">
+<header>
+	<h1>Loan Payoff Calculator </h1>
+</header>
+
+<main>
+	<form id="loan" action="wang-asgn11a-code.php" method="post">
+		<fieldset>
+		<legend>Loan Amount</legend>
+			<label for="name">How Much is the Loan Amount?</label>
+			<input type="text" id="name" name="loanAmt" required>
+		</fieldset>
+<br>
+<fieldset>
+		<fieldset>
+		<legend>Payments</legend>
+			<label for="name">What is your expected monthly payment?</label>
+			<input type="text" id="name" name="pymtAmt" required>
+		</fieldset>
+<br />
+		<button type="submit" id="loan">Calculate Montly Balance and Payoff</button>
+	</form>
+</main>
+<br />
+
+
+<footer>
+	<p class="white">Thank you for using this program - instructor</p>
+</footer>
+</div><!--closes wrapper-->
+</body>
+</html>

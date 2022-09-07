@@ -1,0 +1,82 @@
+<!DOCTYPE html>    
+<html lang="en">    
+<head>    
+         <!--Name:    
+              filename:   wang-lp.html
+			Blackboard Username:  aywang
+                Class Section:  CTI 110
+               Purpose: For Lab 9B
+           -->    
+    <meta charset="utf-8" />  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">     
+    <title>Gentle Men Concert</title>
+	<link href = "wang-style.css" type = "text/css" rel = "stylesheet" />
+</head>    
+ 
+<body>    
+<div class = "container">
+	<header id = "top">
+		<h1> The Gentle Men's Concert </h1>
+	</header>
+	
+	<main>
+		<nav>
+		<img src = "https://starktimes.com/wp-content/uploads/2021/07/Penguinz0.jpg" width = "150" height = "200" alt="Image of Penguinz0">
+			<h2> Navigation </h2>
+			<ul>
+				<li><a href = "#about"> About </a> </li>
+				<li><a href = "#dc"> Dates and Cost </a> </li>
+				<li><a href = "wang-form.html"> Calculate Event Costs </a> </li>
+			</ul>
+		</nav>
+		
+		<section id = "about">
+			<h2>About </h2>
+			<p> The Gentle Men is a band formed in 2019 by two men who have never met in person. They are composed of Charles white and Troy McKubre.</p>
+			<p> Both members of the Gentle Men maintain online presences, Charles White is known on YouTube as penguinz0 and Troy McKubre is known on YouTube as Solstate.</p>
+			<p> Charles is based out of Florida in the United States while Troy is based out of Auckland, New Zealand. All of their music is created remotely. </p>
+			<p> In April 2019, their first single "2019 Guy" was released. The song became a hit amongst the YouTube community, and was featured in PewDiePie's YouTube Rewind 2019. In 2020, the band released five more singles in February, May, June, October and December titled "Obsession", "Real to Me", "Skynut", "2004 Breakup", and "I Am Truth" respectively. Collectively, they are released in the band's first album, "The Evolution of Tears"</p>
+		</section>
+		
+		<section id = "dc"> <!-- TODO: replace the style declarations here into the external css -->
+			<h2>Dates, Location, and Cost</h2>
+			<table style = "border: 2px solid black;">
+				<caption>Dates and Location</caption>
+				<thead>
+					<tr>
+						<th style = "border: 2px solid black;">Dates</th>
+						<th style = "border: 2px solid black;">Location</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr><td>Mar</td><td>Raleigh, NC</td></tr>
+					<tr><td>Apr</td><td>Portland, OR</td></tr>
+					<tr><td>May</td><td>Austin, TX</td></tr>
+				</tbody>
+			</table>
+			<table style = "border: 2px solid black;">
+				<caption>Cost of Tickets</caption>
+				<thead>
+					<tr>
+						<th style = "border: 2px solid black;">Adult</th>
+						<th style = "border: 2px solid black;">Child</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr><td>$36.75</td><td>$25.50</td></tr>
+				</tbody>
+				<tfoot>
+					<tr><td colspan = "2">There is a fee for each transcation. The fee is $1.00/each for groups of 5 or less and $0.50/each for groups more than 5.</td></tr>
+				</tfoot>
+			</table>
+		</section>
+	</main>
+	<br>
+	
+	<footer>
+		<a href = "#top">CTI 110 Project CTI.110.Spring.Wang</a>
+	</footer>
+	
+</div>
+</body>    
+</html>

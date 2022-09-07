@@ -1,0 +1,74 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="talon"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2021-12-08 06:15:41 PM"/>
+        <attribute name="created" value="dGFsb247SEFMTElEQUMtQVBFWC1SOzIwMjAtMDUtMDI7MDU6Mjg6NDUgUE07Mjg1Nw=="/>
+        <attribute name="edited" value="dGFsb247SEFMTElEQUMtQVBFWC1SOzIwMjEtMDQtMDc7MDU6MjI6NTcgUE07ODsyOTc0"/>
+        <attribute name="edited" value="dGFsb247SEFMTElEQUNBTURBUEVYOzIwMjEtMTItMDg7MDY6MTU6NDEgUE07MjM7MzA1Mw=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="T1: LA = 1001 Pymt = 100&#8230; 11 months till 0.&#13;&#10;T2: LA =2079.50 Pymt = 231.20&#8230;9 months till 0&#13;&#10;T3: LA = 4000 Pymt 250&#8230;16 months till 0"/>
+            <declare name="loanAmt" type="Real" array="False" size=""/>
+            <declare name="payment" type="Real" array="False" size=""/>
+            <call expression="welcome()"/>
+            <output expression="&quot;Enter the loan amount&quot;" newline="True"/>
+            <input variable="loanAmt"/>
+            <output expression="&quot;Enter the paymment amount&quot;" newline="True"/>
+            <input variable="payment"/>
+            <call expression="loanReport(loanAmt,payment)"/>
+            <call expression="finish(loanAmt)"/>
+        </body>
+    </function>
+    <function name="createReport" type="None" variable="">
+        <parameters>
+            <parameter name="month" type="Integer" array="False"/>
+            <parameter name="balance" type="Real" array="False"/>
+        </parameters>
+        <body>
+            <output expression="&quot;Month &quot;&amp;month&amp;&quot;    &quot;&amp;&quot;Balance is &quot;&amp;balance" newline="True"/>
+        </body>
+    </function>
+    <function name="finish" type="None" variable="">
+        <parameters>
+            <parameter name="loanAmt" type="Real" array="False"/>
+        </parameters>
+        <body>
+            <output expression="&quot;Your Original Loan Amount was: &quot; &amp;loanAmt" newline="True"/>
+            <output expression="&quot;Thank you for using this program&quot;" newline="True"/>
+        </body>
+    </function>
+    <function name="loanReport" type="None" variable="">
+        <parameters>
+            <parameter name="loanAmt" type="Real" array="False"/>
+            <parameter name="payment" type="Real" array="False"/>
+        </parameters>
+        <body>
+            <declare name="balance" type="Real" array="False" size=""/>
+            <assign variable="balance" expression="loanAmt"/>
+            <declare name="month" type="Integer" array="False" size=""/>
+            <assign variable="month" expression="0"/>
+            <while expression="balance &gt; 0">
+                <assign variable="balance" expression="balance - payment"/>
+                <assign variable="month" expression="month + 1"/>
+                <if expression="balance &lt; 0">
+                    <then>
+                        <assign variable="balance" expression="0"/>
+                    </then>
+                    <else/>
+                </if>
+                <call expression="createReport(month,balance)"/>
+            </while>
+        </body>
+    </function>
+    <function name="welcome" type="None" variable="">
+        <parameters/>
+        <body>
+            <output expression="&quot;Welcome to Know Your Loan Company&quot;" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

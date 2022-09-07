@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+	<!--Name: Instructor
+		Filename: welcome.html
+    Blackboard User Name: XXXX
+    Class Section: CTI.110.XXXX
+    Purpose: This form uses fieldset and dropdown list
+	-->
+	<meta charset="utf-8" />
+	<title>Welcome!</title>
+	<link rel ="stylesheet" type="text/css" href="cti110.css">
+</head>
+<body>
+<h1>Welcome!</h1>
+	<main>
+	<form action = "welcome.php" method = "post" >
+		<fieldset class="alignment">
+		<legend>User Information</legend>
+			<label for="firstName">What is your first name?</label>
+		  <input type="text" id="firstName" size="20" name="firstName">
+			<label for="lastName">What is your last name?</label>
+			<input type="text" id="lastName" size="20" name="lastName">
+		</fieldset>
+		
+		<fieldset class="alignment">
+		<legend>Interest</legend>
+			<label for="interest1">Tell me something that you are interested in:</label>
+			<input type="text" id="interest1" size ="20" name="interest1">
+			<label for="interest2">Tell me something else that you are interested in:</label>
+			<input type="text" id="interest2" size="20" name="interest2">
+			<label for="interest3">Tell me one more thing that you are interested in:</label>
+			<input type="text" id="interest3" size="20" name="interest3">
+		</fieldset>
+		
+		<fieldset>
+		<legend>Birth Info</legend>
+			<label for="birthMonth">Please select your birth month:</label>
+			<select id="birthMonth" name = "birthMonth" >
+				<option>1</option>
+				<option>2</option>
+				<option>3</option>
+				<option>4</option>
+				<option>5</option>
+				<option>6</option>
+				<option>7</option>
+				<option>8</option>
+				<option>9</option>
+				<option>10</option>
+				<option>11</option>
+				<option>12</option>
+			</select>
+			
+			<label for="birthDay">And birth day:</label>
+			<select id="birthDay" name = "birthDay" >
+				<option>1</option><option>2</option><option>3</option><option>4</option><option>5</option>
+				<option>6</option><option>7</option><option>8</option><option>9</option><option>10</option>
+				<option>11</option><option>12</option><option>13</option><option>14</option><option>15</option>
+				<option>16</option><option>17</option><option>18</option><option>19</option><option>20</option>
+				<option>21</option><option>22</option><option>23</option><option>24</option><option>25</option>
+				<option>26</option><option>27</option><option>28</option><option>29</option><option>30</option>
+				<option>31</option>
+			</select>
+		</fieldset>
+		<button type="submit">Submit Data</button>
+	</form>
+	</main>
+</body>
+</html>

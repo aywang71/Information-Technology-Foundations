@@ -1,0 +1,157 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value="Lab &#8211; 5a &#8211; RePetition and Validation"/>
+        <attribute name="authors" value="Andrew Wang"/>
+        <attribute name="about" value="Current Semester: Spring&#13;&#10;Course Section: CTI 110&#13;&#10;Blackboard Username: aywang&#13;&#10;"/>
+        <attribute name="saved" value="2022-02-08 06:59:34 PM"/>
+        <attribute name="created" value="aHlwZXI7REVTS1RPUC1COVVKQzNLOzIwMjItMDItMDg7MDU6MDQ6MDcgUE07Mjg4Ng=="/>
+        <attribute name="edited" value="aHlwZXI7REVTS1RPUC1COVVKQzNLOzIwMjItMDItMDg7MDU6MjM6NDIgUE07MzY7aHlwZXI7REVTS1RPUC1COVVKQzNLOzIwMjItMDItMDI7MDM6NDg6MTEgUE07V2FuZy1sNGEuZnByZzs3MjI1"/>
+        <attribute name="edited" value="aHlwZXI7REVTS1RPUC1COVVKQzNLOzIwMjItMDItMDg7MDY6NTk6MzQgUE07NDszMDA4"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="    ... T1:Adults 0, child 2 Allows re-entry &#13;&#10;    ...     T1a: 999 allows exit &#13;&#10;    ... T2: Adults 2, child 0. Wrong Date.  Allows re-entry &#13;&#10;    ...     T2a: 999 allows exit &#13;&#10;    ... T3: adults 2 , child 2. Subtotal = 124.50. Tax = 8.715 , fee = 5,total cost = 138.215 test&#13;&#10;    5 or less  NO to continue &#13;&#10;    ... T4: adults 3, child 2.  Subtotal = 161.25, Tax=11.2875, fee = 5 for Total Cost = 177.5375. &#13;&#10;    Attending=5 Any key to exit &#13;&#10;    ... T5: adults 3 child 3 subtotal=186.75 tax = 13.0725 fee= 3 totalcost = 202.8225&#13;&#10;"/>
+            <declare name="TAX, ADULTcost, CHILDcost, MINfee, MAXfee" type="Real" array="False" size=""/>
+            <assign variable="TAX" expression="0.07"/>
+            <assign variable="ADULTcost" expression="36.75"/>
+            <assign variable="CHILDcost" expression="25.50"/>
+            <assign variable="MINfee" expression="0.50"/>
+            <assign variable="MAXfee" expression="1.00"/>
+            <declare name="ATTEND" type="Integer" array="False" size=""/>
+            <assign variable="ATTEND" expression="5"/>
+            <declare name="exit" type="String" array="False" size=""/>
+            <assign variable="exit" expression="&quot;NO&quot;"/>
+            <call expression="welcome()"/>
+            <while expression="exit = &quot;NO&quot;">
+                <call expression="concertDetails(TAX,ADULTcost,CHILDcost, MINfee, MAXfee, ATTEND)"/>
+                <output expression="&quot;Do you want to Exit? Enter NO to continue, otherwise enter any key&quot;" newline="True"/>
+                <input variable="exit"/>
+            </while>
+            <call expression="finish"/>
+        </body>
+    </function>
+    <function name="calcCost" type="None" variable="">
+        <parameters>
+            <parameter name="TAX" type="Real" array="False"/>
+            <parameter name="ADULTcost" type="Real" array="False"/>
+            <parameter name="CHILDcost" type="Real" array="False"/>
+            <parameter name="MINfee" type="Real" array="False"/>
+            <parameter name="MAXfee" type="Real" array="False"/>
+            <parameter name="adultTickets" type="Integer" array="False"/>
+            <parameter name="childTickets" type="Integer" array="False"/>
+            <parameter name="date" type="String" array="False"/>
+            <parameter name="name" type="String" array="False"/>
+            <parameter name="phone" type="String" array="False"/>
+            <parameter name="ATTEND" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <declare name="subtotal, salesTax, totalCost, fee" type="Real" array="False" size=""/>
+            <declare name="totalTickets" type="Integer" array="False" size=""/>
+            <assign variable="totalTickets" expression="childTickets + adultTickets"/>
+            <if expression="totalTickets &lt;= ATTEND">
+                <then>
+                    <assign variable="fee" expression="ATTEND * MAXfee"/>
+                </then>
+                <else>
+                    <assign variable="fee" expression="ATTEND * MINfee"/>
+                </else>
+            </if>
+            <assign variable="subtotal" expression="(adultTickets * ADULTcost) + (childTickets * CHILDcost)"/>
+            <assign variable="salesTax" expression="subTotal * TAX"/>
+            <assign variable="totalCost" expression="subtotal + salesTax + fee"/>
+            <call expression="createReport(name, phone, adultTickets, childTickets, date, subTotal, salesTax, fee, totalCost)"/>
+        </body>
+    </function>
+    <function name="concertDetails" type="None" variable="">
+        <parameters>
+            <parameter name="TAX" type="Real" array="False"/>
+            <parameter name="ADULTcost" type="Real" array="False"/>
+            <parameter name="CHILDcost" type="Real" array="False"/>
+            <parameter name="MINfee" type="Real" array="False"/>
+            <parameter name="MAXfee" type="Real" array="False"/>
+            <parameter name="ATTEND" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <declare name="adultTickets, childTickets" type="Integer" array="False" size=""/>
+            <declare name="date, name, phone" type="String" array="False" size=""/>
+            <call expression="errorMsg"/>
+            <output expression="&quot;How Many Adults.  You need at least one.&quot;" newline="True"/>
+            <input variable="adultTickets"/>
+            <while expression="adultTickets &lt;= 0">
+                <call expression="errorMsg"/>
+                <input variable="adultTickets"/>
+            </while>
+            <if expression="adultTickets != 999">
+                <then>
+                    <call expression="errorMsg"/>
+                    <output expression="&quot;What Date?  Date can be Mar, Apr or May.&quot;" newline="True"/>
+                    <input variable="date"/>
+                    <while expression="date != &quot;Mar&quot; AND date != &quot;Apr&quot; AND date != &quot;May&quot; AND date != &quot;999&quot;">
+                        <call expression="errorMsg"/>
+                        <input variable="date"/>
+                    </while>
+                    <if expression="date != &quot;999&quot;">
+                        <then>
+                            <output expression="&quot;Child Tickets Needed&quot;" newline="True"/>
+                            <input variable="childTickets"/>
+                            <output expression="&quot;Name&quot;" newline="True"/>
+                            <input variable="name"/>
+                            <output expression="&quot;Phone Number&quot;" newline="True"/>
+                            <input variable="phone"/>
+                            <call expression="calcCost(TAX, ADULTcost, CHILDcost, MINfee, MAXfee, adultTickets, childTickets, date, name, phone, ATTEND)"/>
+                        </then>
+                        <else/>
+                    </if>
+                </then>
+                <else/>
+            </if>
+        </body>
+    </function>
+    <function name="createReport" type="None" variable="">
+        <parameters>
+            <parameter name="name" type="String" array="False"/>
+            <parameter name="phone" type="String" array="False"/>
+            <parameter name="adultTickets" type="Integer" array="False"/>
+            <parameter name="childTickets" type="Integer" array="False"/>
+            <parameter name="date" type="String" array="False"/>
+            <parameter name="subTotal" type="Real" array="False"/>
+            <parameter name="salesTax" type="Real" array="False"/>
+            <parameter name="fee" type="Real" array="False"/>
+            <parameter name="totalCost" type="Real" array="False"/>
+        </parameters>
+        <body>
+            <output expression="&quot;The Gentlemen's Concert&quot;" newline="True"/>
+            <output expression="&quot;Thank you &quot;&amp;name&amp;&quot; at &quot;&amp;phone&amp;&quot;. Details of your total cost &quot;&amp;totalCost&amp;&quot; can be found below:&quot;" newline="True"/>
+            <output expression="&quot;Adult Tickets: &quot;&amp;adultTickets" newline="True"/>
+            <output expression="&quot;Child Tickets: &quot;&amp;childTickets" newline="True"/>
+            <output expression="&quot;The date you selected was &quot; &amp; date" newline="True"/>
+            <output expression="&quot;Subtotal is: $ &quot;&amp;subtotal&amp;&quot;, Tax is: $&quot;&amp;salesTax&amp;&quot;, Additional Fee is $&quot;&amp;fee&amp; &quot; for a total cost of: $ &quot;&amp;totalCost" newline="True"/>
+        </body>
+    </function>
+    <function name="errorMsg" type="None" variable="">
+        <parameters/>
+        <body>
+            <output expression="&quot;You must have at least one adult ticket. You must choose one of the allowed dates which are Mar, Apr and May.  Input 999 to exit.&quot;" newline="True"/>
+        </body>
+    </function>
+    <function name="finish" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="endOfJob" type="String" array="False" size=""/>
+            <assign variable="endOfJob" expression="&quot;Thank you for using this program.  This program was designed by Wang&quot;"/>
+            <output expression="endOfJob" newline="True"/>
+        </body>
+    </function>
+    <function name="welcome" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="concertTitle, purpose" type="String" array="False" size=""/>
+            <assign variable="purpose" expression="&quot;This program calculates total cost of concert tickets&quot;"/>
+            <assign variable="concertTitle" expression="&quot;The Gentlemen's Concert&quot;"/>
+            <output expression="purpose" newline="True"/>
+            <output expression="concertTitle" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

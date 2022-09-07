@@ -1,0 +1,112 @@
+body {
+	background-color: blue, white, red;
+	font-family: Georgia, Verdana, Courier;
+}
+
+.container {
+	background-color: white;
+	margin: 0 auto;
+	padding: 20px;
+	width: 800px;
+}
+
+header {
+	background-color: grey;
+	color: red;
+	text-align: center;
+	padding: 5px;
+	margin-bottom: 18px;
+}
+
+nav {
+	width: 180px;
+	float:left;
+}
+
+nav ul {
+	padding: 0;
+	font-size: 15px;
+}
+
+ul{
+	list-type: none;
+}
+
+main{
+	padding: 10px;
+}
+
+a {
+	text-decoration: none;
+	color: blue;
+}
+
+img {
+	border: 2px;
+	width: 140px;
+}
+
+.white {
+	color: white;
+}
+
+h2 { 
+	color: green;
+}
+
+footer {
+	clear: both;
+	padding: 10px;
+	background-color: purple;
+	text-align: center;
+}
+
+table, th, td {
+	border: 2px;
+	padding: 10px;
+}
+
+thead {
+	background-color: yellow;
+	color: red;
+}
+
+table {
+	width: 35%;
+	float: left;
+	margin: 25px;
+}
+
+tbody {
+	color: pink;
+}
+
+tfoot {
+	font-size: 75%;
+	color: gray;
+}
+
+caption {
+	font-family: Georgia, Verdana, Courier;
+	font-weight: bold;
+	font-size: 120%;
+	color: blue;
+	border: 2px solid red;
+}
+
+legend {
+	background-color: green;
+	color: blue;
+	padding: 5px 5pz;
+}
+
+.alignment {
+	display: Block;
+	margin-bottom: .2rem;
+}
+
+button {
+	background-color: blue;
+	color: green;
+	font-size: 1.5em;
+}

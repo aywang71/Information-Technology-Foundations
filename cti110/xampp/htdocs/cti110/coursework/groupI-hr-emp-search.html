@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!--Name: Natasha Wilson
+    Filename: groupI-hr-fuel.html
+    Blackboard Username: nkwilson@my.waketech.edu
+    Class Section: CTI.110.XXXX
+    Purpose: Trip cost calculator FORM
+  -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Search for Employee</title>
+  <link href="groupI-hr-style.css" type="text/css" rel="stylesheet" />
+</head>
+<body>
+<div class="container">
+<header class="white">
+  <h1>Employee Last Name or ID search</h1>
+</header>
+
+<br>
+<main>
+  <form id="hr-search" class="alignment" action="groupI-hr-emp-search.php" method="post">
+  <fieldset>
+    <label for="last_name">Search by Last Name:</label>
+    <input type="radio" id="last_name" name="stype" value="last_name">
+    <label for="lname">Search by Employee ID:</label>
+    <input type="radio" id="employee_id" name="stype" value="employee_id">
+
+    
+</fieldset>
+<br>
+  <fieldset>
+    <label for="lname">Enter Employee last name or ID:</label>
+    <input type="text" id="lname" name="lname">
+  </fieldset>
+<br>
+<br />
+  <button>Submit</button> 
+</footer>
+</form>
+</main>
+<br />
+<footer>
+  <a class="white" href="groupI-hr-portal.html">Return to Portal</a>
+</footer>
+</div><!--closes wrapper-->
+</body>
+</html>

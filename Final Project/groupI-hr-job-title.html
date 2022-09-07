@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<!--Name: Wilson
+		Filename: groupI-hr-job-title.html
+    Blackboard User Name: xiwilson
+    Class Section: CTI.110.0001
+    Purpose: An HTML form for searching job titles and salaries in a database.
+	-->
+	
+<!-- Validated by Andrew Wang 4.24. No errors, adjusted code structure. Need to align with backend (not sure where the file is) and adjust selection for job options after discussion.-->
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Employee Search</title>
+	<link href="groupI-hr-style.css" type="text/css" rel="stylesheet" />
+	<style>
+	a {color: black;}
+	h3 {font-size: 30px;}
+	</style>
+</head>
+
+<body>
+<div class="container">
+
+<header>
+	<h1>Salary Report Creator</h1>
+	<h2>Find an average salary for a job title</h2>
+</header>
+
+<main>
+	<section>
+		<h3>Job Title Search</h3>
+	</section>
+
+	<!--TODO: The file 'groupI-hr-job-title.php' is not in the backend folder -->
+	<form id="jobTitle" class="placeholder" action="groupI-hr-job-title.php" method="post">
+	<fieldset>
+		<legend>Chose a Job Title</legend>
+			<label for="job_Title">Choose a Title:</label>
+			<select name="job_Title" id="job_Title">
+			<!--TODO: Am not aware if there is a specific list of job titles 
+			compiled yet, so there's only 3 placeholders for now. -->
+				<option value="President">President</option>
+				<option value="Accountant">Accountant</option>
+				<option value="Janitor">Janitor</option>
+			</select>
+		</fieldset>
+		<br>
+		<button type="submit" form="jobTitle">Go!</button>
+		<br><br>
+	</form>
+</main>
+		
+<footer>
+	<a href="groupI-hr-portal.html">Return to Index Page</a>
+</footer>
+
+</div>
+</body>
+</html>

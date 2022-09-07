@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<!--Name: Wilson
+		Filename: groupI-hr-tbd.html
+    Blackboard User Name: xiwilson
+    Class Section: CTI.110.0001
+    Purpose: An HTML form for a report on a to be decided topic.
+	-->
+	
+<!-- Validated by Andrew Wang 4.24. No errors, adjusted code structure. -->
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>TBD Report</title>
+	<link href="groupI-hr-style.css" type="text/css" rel="stylesheet" />
+	<style>
+	a {color: black;}
+	h3 {font-size: 30px;}
+	</style>
+</head>
+
+<body>
+<div class="container">
+
+<header>
+	<h1>TBD Report</h1>
+	<h2>Find a Report on Multiple Topics</h2>
+</header>
+
+<main>
+	<section>
+		<h3>Report Search</h3>
+	</section>
+
+	<form id="reportTitle" class="placeholder" action="groupI-hr-tbd.php" method="post">
+		<fieldset>
+			<legend>Chose a Report Topic</legend>
+			<label for="job_Title">Choose a Report:</label>
+			<select name="job_Title" id="job_Title">
+			<!-- Am not sure if we've decided on any two tables to create a report with, so for
+			now I've included every possible option.  Can be removed if needed.			-->
+				<option value="Country">Country Report</option>
+				<option value="Department">Department Report</option>
+				<option value="Location">Location Report</option>
+				<option value="Region">Region Report</option>
+				<option value="Employee">Employee Report</option>
+			</select>
+		</fieldset>
+		<br>
+		<button type="submit" form="reportTitle">Go!</button>
+		<br><br>
+	</form>
+</main>
+
+<footer>
+	<a href="groupI-hr-portal.html">Return to Index Page</a>
+</footer>
+
+</div>
+</body>
+</html>

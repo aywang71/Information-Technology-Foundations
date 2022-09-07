@@ -1,0 +1,117 @@
+/*Name: Andrew Wang
+		Filename: groupI-hr-style.css
+    Blackboard User Name: aywang
+    Class Section: CTI.110.0001
+    Purpose: Style sheets for the whole project
+	*/
+
+body {
+	background-color: #eee;
+	font-family: "comic sans ms", cursive, sans-serif;
+ }
+
+header {
+	background-color:#666cff;
+	color:white;
+	text-align:center;
+	padding:5px;
+	margin-bottom:18px;
+ }
+	
+nav ul {
+	list-style-type: none;
+	padding:0px;
+	font-size:15px;
+ }
+ 
+ul {
+	list-style-type: none;
+	padding: 0px;
+	border: 2px solid black;
+ }
+ 
+li {
+	border: 2px solid black;
+	padding: 0px;
+ }
+ 
+nav {
+	width:180px;
+	float:left;
+ }
+ 
+a	{
+	text-decoration:underline;
+	color:blue;
+ }
+ 
+img {
+	border:2px solid #4f33ff;
+	text-align: center;
+	width: auto;
+	height: auto;
+ } 
+ 
+h1 {color:lightblue;}
+h2 {color:darkblue;}
+h3 {color: blueviolet;}
+
+table,th, td {
+	border: 2px solid black;
+ }
+
+thead {
+	background-color:#3399ff;
+	color:white; 
+ }
+
+tbody {color:black;}
+
+tfoot {
+	font-size:75%;
+	color:gray;
+	background-color:#666cff;
+ }
+
+caption {
+	font-family: "comic sans ms", cursive, sans-serif;
+	font-weight:bold;
+	font-size:120%;
+	color:darkblue;
+	border: 2px solid darkblue;
+ }
+	
+button {
+	background-color:#3399ff;
+	color:white;
+	font-size:1.5em;
+	}
+
+legend {
+	background-color:#3399ff;
+	color: white;
+	padding: 5px;
+ }
+ 
+.container {
+	background-color: white;
+	margin: 0 auto;
+    width:800px;
+ }
+
+.alignment label {
+	display: block;
+	margin-bottom: .2rem;
+	color: black;
+ }
+
+main {
+	padding: 10px;
+ }				
+	
+footer {
+  clear:both;
+  padding: 10px;
+  background-color:#666cff;
+  text-align: center;
+ }

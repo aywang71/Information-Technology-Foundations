@@ -1,0 +1,115 @@
+body {
+	background-color: #eee;
+	font-family: "comic sans ms", cursive, sans-serif;
+ }
+
+header {
+	background-color:#666cff;
+	color:white;
+	text-align:center;
+	padding:5px;
+	margin-bottom:18px;
+ }
+	
+nav ul {
+	list-style-type: none;
+	padding:0px;
+	font-size:15px;
+ }
+ 
+ul {
+	list-style-type: none;
+	padding: 0px;
+	border: 2px solid black;
+ }
+ 
+li {
+	border: 2px solid black;
+	padding: 0px;
+ }
+ 
+nav {
+	width:180px;
+	float:left;
+ }
+ 
+a	{
+	text-decoration:none;
+	color:blueviolet;
+ }
+ 
+img {
+	border:2px solid #4f33ff;
+	width:140px;
+ } 
+ 
+h1 {color:lightblue;}
+h2 {color:darkblue;}
+h3 {color: blueviolet;}
+
+table,th, td {
+	border: 2px solid black;
+ }
+
+thead {
+	background-color:#3399ff;
+	color:white; 
+ }
+
+tbody {color:blue;}
+
+tfoot {
+	font-size:75%;
+	color:gray;
+	background-color:#666cff;
+ }
+
+caption {
+	font-family: "comic sans ms", cursive, sans-serif;
+	font-weight:bold;
+	font-size:120%;
+	color:darkblue;
+	border: 2px solid darkblue;
+ }
+	
+button {
+	background-color:#3399ff;
+	color:white;
+	font-size:1.5em;
+	}
+
+legend {
+	background-color:#3399ff;
+	color: white;
+	padding: 5px;
+ }
+
+/*Andrew note: I don't know what classes we want, but we need three properties per class. Below are a few filler ones */
+ 
+
+/*I think the container class is good because it sets width of the website*/
+.container {
+	background-color: white;
+	margin: 0 auto;
+    width:800px;
+ }
+
+/*This one has three properties but I don't know what I'd ever use it for*/
+.alignment label {
+	display: block;
+	margin-bottom: .2rem;
+	color: black;
+ }
+
+
+		
+main {
+	padding: 10px;
+ }				
+	
+footer {
+  clear:both;
+  padding: 10px;
+  background-color:#666cff;
+  text-align: center;
+ }

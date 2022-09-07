@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!--
+	Validated by Andrew Wang 4.24. No errors, adjusted code structure. Need to align with backend (not sure where the file is) and adjust selection for job options after discussion.
+  -->
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Employee Search</title>
+	<link href="groupI-hr-style.css" type="text/css" rel="stylesheet" />
+	<style>
+	a {color: black;}
+	h3 {font-size: 30px;}
+	</style>
+	
+</head>
+  <title>Search by Job Title</title>
+  <link href="groupI-hr-style.css" type="text/css" rel="stylesheet" />
+</head>
+<body>
+<div class="container">
+
+<header>
+	<h1>Salary Report Creator</h1>
+	<h2>Find an average salary for a job title</h2>
+</header>
+
+<br>
+<main>
+	<section>
+		<h3>Job Title Search</h3>
+	</section>
+  <form id="hr-search" class="alignment" action="./groupI-hr-job-title.php" method="post">
+		<br>
+  	<fieldset>
+    	<label for="etitle">Enter Job Title:</label>
+		    <select name="etitle" id = "etitle">
+		        <option>Public Accountant</option>
+				<option>Accounting Manager</option>
+				<option>Administration Assistant</option>
+				<option>President</option>
+		        <option>Administration Vice President</option>
+				<option>Accountant</option>
+				<option>Finance Manager</option>
+				<option>Human Resources Representative</option>
+				<option>Programmer</option>
+				<option>Marketing Manager</option>
+				<option>Marketing Representative</option>
+				<option>Public Relations Representative</option>
+				<option>Purchasing Clerk</option>
+				<option>Purchasing Manager</option>
+				<option>Sales Manager</option>
+				<option>Sales Representative</option>
+				<option>Shipping Clerk</option>
+				<option>Stock Clerk</option>
+				<option>Stock Manager</option>
+			</select>
+  	</fieldset>
+		<br>
+<br />
+  <button>Go!</button> 
+</footer>
+</form>
+</main>
+<br />
+<footer>
+  <a class="white" href="groupI-hr-portal.html">Return to Portal</a>
+</footer>
+</div><!--closes wrapper-->
+</body>
+</html>

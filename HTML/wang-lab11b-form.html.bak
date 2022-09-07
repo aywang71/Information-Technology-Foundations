@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<!--Name: Andrew Wang
+		Filename: lab11b-form.html
+    Blackboard User Name: aywang
+    Class Section: CTI.110.XXXX
+    Purpose: For Lab 11B
+	-->
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Event Form DD</title>
+	<link href="wang-lab11b-style.css" type="text/css" rel="stylesheet" />
+</head>
+<body>
+<div class="container">
+<header class="white">
+	<h1>Calculate Cost of Tickets</h1>
+</header>
+<aside>
+<p>There is a ticket fee of $0.50/ticket for orders with over 5 tickets.
+  Otherwise the fee is $1.00/ticket.</p>
+</aside>
+<br>
+<main>
+	<form id="concertForm" class="alignment" action="wang-lab11b-code.php" method="post">
+		<fieldset>
+		<legend>User Information</legend>
+			<label for="name">Name:</label>
+			<input type="text" id="name" name="name" required>
+			<label for="phone">Phone Number:</label>
+			<input type="tel" id="phone" name="phone" placeholder="123-456-7890"
+        pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required>
+        <small>Format: 123-454-5678</small>
+		</fieldset>
+<br>
+<fieldset>
+		<legend>Concert Location Desired</legend>
+			<label for="date">Choose a Location</label>
+			<select name="location" id="location">
+				<option value="Raleigh, NC">Raleigh,NC</option>
+				<option value="Portland, OR">Portland,Or</option>
+        <option value="Austin, TX">Austin, Tx</option>
+			</select>
+		</fieldset>
+<br>    
+		<fieldset>
+		<legend>Tickets Needed</legend>
+			<label for="adult">How many adult Tickets?</label>
+			<input type="number" id="adult" name="adultTickets" min="1" value="1">
+			<label for="child">How many child Tickets?</label>
+			<input type="number" id="child" name="childTickets" min="0" value="0">
+		</fieldset>
+<br>
+		<fieldset>
+			<legend>What Date Do You Want</legend>
+				<label>Apr 2022</label>
+				<input type="radio" name="date" value="Apr 2021" checked  >
+				<label>May 2022</label>
+				<input type="radio" name="date" value="May 2021">
+				<label>Jun 2022</label>
+				<input type="radio" name="date" value="Jun 2021">
+		</fieldset>
+<br />
+		<button type="submit" id="concertForm">Send Your Order</button>
+	</form>
+</main>
+<br />
+<footer>
+	<p class="white">The Band is looking forward to seeing you!</p>
+</footer>
+</div><!--closes wrapper-->
+</body>
+</html>

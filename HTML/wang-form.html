@@ -1,0 +1,64 @@
+<!DOCTYPE html>    
+<html lang="en">    
+<head>    
+         <!--Name:    
+              filename:   wang-form.html
+			Blackboard Username:  aywang
+                Class Section:  CTI 110
+               Purpose: For Lab 9B
+           -->    
+    <meta charset="utf-8" />  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">     
+    <title>Calculate Cost of Tickets</title>
+	<link href = "wang-style.css" type = "text/css" rel = "stylesheet" />
+</head>
+
+<body>
+<div class = "container">
+<header class = "white">
+	<h1>Calculate Event Cost</h1>
+</header>
+
+<aside>
+	<p>There is a ticket fee of $0.50/ticket for orders with over 5 tickets. Otherwise the fee is $1.00/ticket.</p>
+</aside>
+<br>
+<main>
+	<form id = "concertform" class = "alignment" action = "#" method = "post">
+		<fieldset>
+		<legend>User Information</legend>
+			<label for = "name">Name:</label> <br>
+			<input type = "text" id = "name" name = "name"> <br>
+			<label for = "phone">Phone Number:</label> <br>
+			<input type = "tel" id = "phone" name = "phone" placeholder = "123-456-7890" pattern = "[0-9]{3}-[0-9]{3}-[0-9]{4}" required>
+		</fieldset>
+<br>
+		<fieldset>
+		<legend>Tickets Needed</legend>
+			<label for = "adult">How many adult Tickets?</label> <br>
+			<input type = "number" id = "adult" name = "adultTickets" min = "1" value = "1"> <br>
+			<label for = "child">How many child Tickets?</label> <br>
+			<input type = "number" id = "child" name = "childTickets" min = "0" value = "0">
+		</fieldset>
+<br>
+		<fieldset>
+		<legend>What Date Do You Want</legend>
+			<label for = "date">Date list</label> <br>
+			<select name = "date" id = "date">
+				<option value = "Mar">Mar</option>
+				<option value = "Apr">Apr</option>
+				<option value = "May">May</option>
+			</select>
+		</fieldset>
+<br />
+		<button type = "submit" id = "concertForm">Send Your Order</button>
+	</form>
+</main>
+<br />
+
+<footer>
+	<a class = "white" href = "wang-lp.html">Return to Main page</a>
+</footer>
+</div>
+</body>
+</html>

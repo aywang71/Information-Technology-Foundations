@@ -1,0 +1,105 @@
+<!DOCTYPE html>    
+<html lang="en">    
+<head>    
+         <!--Name:    
+              filename:   wang-l8-form
+			Blackboard Username:  aywang
+                Class Section:  CTI 110
+               Purpose: 
+           -->    
+    <meta charset="utf-8" />  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">     
+    <title></title>    
+</head>    
+ 
+<body style = "font-family: Georgia, Verdana, Courier">
+<header>
+	<h1 style = "color: blue" >Calculate Event Cost</h1>
+</header>
+
+<aside>
+	<p>There is a ticket fee of $0.50/ticket for orders with over 5 tickets. Otherwise the fee is $1.00/ticket.</p>
+</aside>
+
+<form id = "concertform" action = "#" method = "post">
+	<section>
+	<h2 style = "color: red">User Information</h2>
+	<fieldset>
+	<legend style = "background-color: yellow; color: red; font-family: Verdana, Courier, Georiga">Name and Phone Number</legend>
+		<ul style = "list-style-type: none padding:0px">
+			<li style = "padding: 25px">
+				<label style = "font-family: papyrus" for = "name">Name: </label>
+				<input type = "text" id = "name" name = "name">
+			</li>
+			<li style = "padding: 25px">
+				<label style = "font-family: papyrus" for = "phone">Phone Number: </label>
+				<input type = "tel" id = "phone" name = "phoneNumber">
+			</li>
+		</ul>
+	</fieldset>
+	</section>
+	
+	<section>
+	<h2 style = "color: red"> Location </h2>
+	<fieldset>
+	<legend style = "background-color: yellow; color: red; font-family: Verdana, Courier, Georiga">Concert Location Desired</legend>
+		<ul style = "list-style-type: none padding:0px">
+			<li style = "padding: 25px">
+				<label style = "font-family: papyrus" > Choose a Location: </label>
+				<select name = "location">
+					<option value = "NC"> Raleigh, NC</option>
+					<option value = "OR"> Portland, OR</option>
+					<option value = "TX"> Austin, TX</option>
+				</select>
+			</li>
+		</ul>
+	</fieldset>
+	</section>
+	
+	<section>
+	<h2 style = "color: red">Tickets</h2>
+	<fieldset>
+	<legend style = "background-color: yellow; color: red; font-family: Verdana, Courier, Georiga">Adult and Child Tickets</legend>
+		<ul style = "list-style-type: none padding:0px">
+			<li style = "padding: 25px">
+				<label style = "font-family: papyrus" for = "adult">How many adult Tickets?</label>
+				<input style = "font-family: papyrus" type = "text" id = "adult" name = "adultTickets">
+			</li>
+			<li style = "padding: 25px">
+				<label style = "font-family: papyrus" for = "child">How many child Tickets?</label>
+				<input style = "font-family: papyrus" type = "text" id = "child" name = "childTickets">
+			</li>
+		</ul>
+	</fieldset>
+	</section>
+	
+	<section>
+	<h2 style = "color: red">Dates</h2>
+	<fieldset>
+	<legend style = "background-color: yellow; color: red; font-family: Verdana, Courier, Georiga">Concert Date Desired</legend>
+		<ul style = "list-style-type: none padding:0px">
+			<li style = "padding: 25px">
+				<label style = "font-family: papyrus" >Choose a Date: </label>
+				<select name = "date">
+					<option value = "Mar">Mar</option>
+					<option value = "Apr">Apr</option>
+					<option value = "May">May</option>
+				</select>
+			</li>
+		</ul>
+	</fieldset>
+	</section>
+</form>
+
+<br>
+<br>
+
+<footer>
+	<button  style = "background-color: yellow; color: red; font-family: Verdana, Courier, Georiga"type = "submit" form = "ConcertForm">Sign-Up</button>
+<br>
+<br>
+	<a href="wang-l6-lp.html">Return to Main page</a>
+</footer>
+
+</body>
+</html>

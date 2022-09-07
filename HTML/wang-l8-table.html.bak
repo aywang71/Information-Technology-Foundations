@@ -1,0 +1,133 @@
+<!DOCTYPE html>    
+<html lang="en">    
+<head>    
+         <!--Name:    
+              filename:   wang-l8-table
+			Blackboard Username:  aywang
+                Class Section:  CTI 110
+               Purpose: Lab 8B
+           -->    
+    <meta charset="utf-8" />  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">     
+    <title>L8 Temperatures</title>
+<style>
+table {
+	font-family: Georgia, Verdana, Courier;
+	border: 3px solid purple;
+	width: 50%;
+}
+th, td {
+	border: 3px solid green;
+	text-align: center;
+
+}
+ul {
+	list-style-type: None;
+	padding: 0;
+}
+h1 {
+	color: blue;
+}
+h2 {
+	color: purple;
+}
+tbody > tr > th{
+	background-color: blue;
+	border-bottom: 10px solid gray;
+	font-weight: normal;
+}
+thead > tr >th {
+	border: solid 2px purple;
+	font-family: Georgia, Verdana, Courier;
+	background-color: black;
+	color: white;
+}
+tfoot > tr > td {
+	font-weight: bold;
+	background-color: black;
+	color: white;
+}
+caption {
+	color: red;
+	font-weight: bold;
+}
+.low {
+	background-color: yellow;
+	color: red;
+	font-weight:bold;
+}
+.high {
+	background-color: red;
+	color: yellow;
+	font-weight: bold;
+}
+.month {
+	text-align: left;
+}
+</style>
+</head>    
+ 
+<body>    
+<header>
+	<h1>Monthly Temperatures</h1>
+	<h2>Raleigh, North Carolina</h2>
+</header>
+
+<nav>
+	<h2>Navigation</h2>
+	<a href = "#about"> About </a> <!-- add links here !--> <br>
+	<a href = "#table"> Raleigh Temperatures </a> <br>
+	<a href = "https://www.waketech.edu/"> Wake Tech Community College </a>
+</nav>
+
+<main>
+	<section id = "about">
+	<p> North Carolina is the state that is located above South Carolina. It is oftentimes reffered to as the "better Carolina". I say that it is unfair to say so because I can guarentee most people only say it is better because the roads are better; nobody gets into the minutiae of the states and does a real comparison. I say let us enjoy North Carolina without un-needed comparisons and let us enjoy the varied landscapes such as the tall mountains and the high seas. The waves are splendid and so is the skiing. Much love North Carolina.  </p>
+	<p>Paragraph two about NC </p>
+	</section>
+	
+	<section id = "table">
+		<table></th>
+			<caption>10-year temperature averages for Raleigh, 2010 to 2019</caption>
+			<thead>
+				<tr>
+					<th>MONTH</th>
+					<th>High °F</th>
+					<th>Low °F</th>
+				</tr>
+			</thead>
+			<tbody>
+				<div>
+					<th colspan = "3"> Winter Season </th>
+				</div>
+				<tr> <td class = "month">December</td><td>56</td><td>37</td> </tr>
+				<tr> <td class = "month">Janauary</td><td>51</td><td class = "low">31</td> </tr>
+				<tr> <td class = "month">February</td><td>55</td><td>34</td> </tr>
+				<tr>
+					<th colspan = "3"> Spring Season </th>
+				</tr>
+				<tr> <td class = "month">March</td><td>62</td><td>40</td> </tr>
+				<tr> <td class = "month">April</td><td>73</td><td>50</td> </tr>
+				<tr> <td class = "month">May</td><td>82</td><td>60</td> </tr>
+				<tr>
+					<th colspan = "3"> Summer Season </th>
+				</tr>
+				<tr> <td class = "month">June</td><td>89</td><td>67</td> </tr>
+				<tr> <td class = "month">July</td><td class = "high">92</td><td>71</td> </tr>
+				<tr> <td class = "month">August</td><td>89</td><td>70</td> </tr>
+				<tr>
+					<th colspan = "3"> Autumn Season </th>
+				</tr>
+				<tr> <td class = "month">September</td><td>84</td><td>67</td> </tr>
+				<tr> <td class = "month">October</td><td>73</td><td>52</td> </tr>
+				<tr> <td class = "month">November</td><td>61</td><td>40</td> </tr>
+			</tbody>
+			<tfoot>
+				<tr> <th colspan = "3"> 12 Month Average Temperature (Year)</th> </tr>
+				<tr> <td>Average</td><td>72</td><td>51</td>
+			</tfoot>
+		</table>
+	</section>
+ 
+</body>    
+</html>

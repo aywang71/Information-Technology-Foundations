@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<!--Name: Wilson
+		Filename: groupI-hr-emp-search.html
+    Blackboard User Name: xiwilson
+    Class Section: CTI.110.0001
+    Purpose: An HTML form for searching employees in a database.
+	-->
+
+<!-- Validated by Andrew Wang 4.24. No errors, adjusted code structure -->
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Employee Search</title>
+	<link href="groupI-hr-style.css" type="text/css" rel="stylesheet" />
+	<style>
+	a {color: black;}
+	h3 {font-size: 30px;}
+	</style>
+</head>
+
+<body>
+<div class="container">
+
+<header>
+	<h1>Employee Database</h1>
+	<h2>Search for Employees by Name or ID</h2>
+</header>
+
+<main>
+	<section>
+		<h3>Complete Search by <em>Employee ID</em></h3>
+	</section>
+		
+	<!--TODO: Currently a bunch of placeholder values and ID names I've guessed here.  Can be changed if needed -->
+	<form id="employeeID" class="placeholder" action="groupI-hr-emp-search.php" method="post">
+		<fieldset>
+			<legend>Employee ID Search</legend>
+			<label for="empID">ID:</label>
+			<input type="text" id="empID" name="empID" maxlength="6" required/>
+		</fieldset>	
+		<br>
+		<button type="submit" form="employeeID">Go!</button>
+		<br>
+	</form>
+	
+	<section>
+		<h3>Complete Search by <em>Last Name</em></h3>
+	</section>	
+
+	<!--TODO: Currently a bunch of placeholder values and ID names I've guessed here.  Can be changed if needed -->
+	<form id="surname" class="placeholder" action="groupI-hr-emp-search.php" method="post">
+		<fieldset>
+			<legend>Last Name Search</legend>
+			<label for="lastName">Name:</label>
+			<input type="text" id="lastName" name="lastName" required/>
+		</fieldset>	
+		<br>
+		<button type="submit" form="surname">Go!</button>
+		<br><br>
+	</form>
+
+</main>	
+
+<footer>
+	<a href="groupI-hr-portal.html">Return to Index Page</a>
+</footer>
+
+</div>
+</body>
+</html>
+	
+	

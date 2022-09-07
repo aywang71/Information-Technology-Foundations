@@ -1,0 +1,53 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value="Assignment 5A &#8211; working with the while and decision structure "/>
+        <attribute name="authors" value="Andrew Wang"/>
+        <attribute name="about" value="Current Semester: Spring&#13;&#10;Course Section: CTI 110&#13;&#10;Blackboard Username: aywang&#13;&#10;"/>
+        <attribute name="saved" value="2022-02-08 07:56:24 PM"/>
+        <attribute name="created" value="aHlwZXI7REVTS1RPUC1COVVKQzNLOzIwMjItMDItMDg7MDc6MjU6MjggUE07Mjg5NA=="/>
+        <attribute name="edited" value="aHlwZXI7REVTS1RPUC1COVVKQzNLOzIwMjItMDItMDg7MDc6NTY6MjQgUE07NTszMDA2"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="T1: LA = 1001 Pymt = 100&#8230; 11 months till 0.&#13;&#10;T2: LA =2079.50 Pymt = 231.20&#8230;9 months till 0&#13;&#10;T3: LA = 4000 Pymt 250&#8230;16 months till 0&#13;&#10;"/>
+            <call expression="welcome"/>
+            <call expression="loanReport"/>
+            <call expression="finish"/>
+        </body>
+    </function>
+    <function name="finish" type="None" variable="">
+        <parameters/>
+        <body>
+            <output expression="&quot;Thank you for using this loan report program. This program was made by Wang.&quot;" newline="True"/>
+        </body>
+    </function>
+    <function name="loanReport" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="LOAN, PAYMENT, month, runningBalance" type="Integer" array="False" size=""/>
+            <assign variable="month" expression="0"/>
+            <output expression="&quot;Enter the loan amount:&quot;" newline="True"/>
+            <input variable="LOAN"/>
+            <assign variable="runningBalance" expression="LOAN"/>
+            <output expression="&quot;Enter the payment amount:&quot;" newline="True"/>
+            <input variable="PAYMENT"/>
+            <while expression="runningBalance &gt; PAYMENT">
+                <assign variable="month" expression="month + 1"/>
+                <assign variable="runningBalance" expression="runningBalance - PAYMENT"/>
+                <output expression="&quot;Month &quot; &amp; month &amp; &quot;   Balance is &quot; &amp; runningBalance" newline="True"/>
+            </while>
+            <assign variable="month" expression="month + 1"/>
+            <assign variable="runningBalance" expression="0"/>
+            <output expression="&quot;Month &quot; &amp; month &amp; &quot;   Balance is &quot; &amp; runningBalance" newline="True"/>
+            <output expression="&quot;Your Original Loan Amount was: &quot; &amp; LOAN" newline="True"/>
+        </body>
+    </function>
+    <function name="welcome" type="None" variable="">
+        <parameters/>
+        <body>
+            <output expression="&quot;Welcome to Andrew Wang's loan report program!&quot;" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
